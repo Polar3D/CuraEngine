@@ -153,7 +153,8 @@ private:
                     SimpleModel *test = loadModelFromFile(model,files[i].c_str(), config.matrix);
                     if(test == nullptr) { // error while reading occurred
                         cura::logError("Failed to load model: %s\n", files[i].c_str());
-                        return false;
+                        // return false;
+			exit(1);
                     }
                 }
             }
