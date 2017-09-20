@@ -47,10 +47,11 @@ else
 	ifeq ($(UNAME), Linux)
 		OPEN_HTML=firefox
 		ifeq ($(BUILD_TYPE),DEBUG)
-			LDFLAGS += --static
+			# LDFLAGS += --static
 		else
 			CFLAGS += -flto
-			LDFLAGS += --static -flto
+			# LDFLAGS += --static -flto
+			LDFLAGS += -flto
 		endif
 	endif
 	ifeq ($(UNAME), OpenBSD)
